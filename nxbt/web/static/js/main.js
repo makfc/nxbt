@@ -326,6 +326,7 @@ function displayOtherSessions() {
     // If there aren't any controller sessions
     if (controllerIndices.length < 1) {
         HTML_CONTROLLER_SESSIONS.classList.add("hidden");
+        createProController();
         return;
     // If the only controller session is the current one
     } else if (controllerIndices.length === 1 && 
