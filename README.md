@@ -42,6 +42,21 @@
 
 ## Installation
 
+### Ubuntu 23.04
+
+```bash
+cd ~
+git clone https://github.com/makfc/nxbt.git
+cd nxbt
+python3 -m venv env
+source env/bin/activate
+pip install .
+
+# Using the Webapp
+cd ~/nxbt
+sudo ~/nxbt/env/bin/python -m nxbt.web.app
+```
+
 ### Linux
 
 ```bash
