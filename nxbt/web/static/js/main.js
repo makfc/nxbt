@@ -295,9 +295,15 @@ window.addEventListener("gamepadconnected", function(evt) {
     input.innerHTML = gamepadID;
     input.setAttribute("value", "gamepad");
     input.setAttribute("index", gamepadIndex);
+    input.setAttribute('selected','');
     input.id = gamepadID;
 
     inputs.appendChild(input);
+    const obj = {};
+    obj.target = inputs;
+    obj.target.value = InputDevice.GAMEPAD;
+    obj.target.selectedIndex = inputs.options.length - 1;
+    changeInput(obj);
 });
 
 window.addEventListener("gamepaddisconnected", function(evt) {
